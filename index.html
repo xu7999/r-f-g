@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茗香茶韵 - 优质茶叶零售</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#127861;</span>
+                <span class="logo-text">茗香茶韵</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#products">产品</a></li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+            <button class="cart-btn" onclick="toggleCart()">
+                <span>&#128717;</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <header class="hero" id="home">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">传承千年茶道</div>
+            <h1 class="hero-title">品味千年茶文化</h1>
+            <p class="hero-subtitle">源自高山云雾，手工精制，每一杯都是自然的馈赠</p>
+            <a href="#products" class="btn-primary">
+                <span>立即选购</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        <div class="hero-scroll-hint">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>向下滚动</span>
+        </div>
+        <!-- 浮动装饰元素 -->
+        <div class="float-leaf leaf-1">🍃</div>
+        <div class="float-leaf leaf-2">🌿</div>
+        <div class="float-leaf leaf-3">🍵</div>
+        <div class="float-leaf leaf-4">🍃</div>
+    </header>
+
+    <!-- 特色区域 -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">&#127807;</div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3>源头直供</h3>
+                    <p>来自中国核心产茶区，直接与茶农合作</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">&#127744;</div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3>手工精制</h3>
+                    <p>传统工艺制作，保留茶叶最本真的味道</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">&#128241;</div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3>快速配送</h3>
+                    <p>全国顺丰包邮，新鲜到家</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">&#128161;</div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3>品质保证</h3>
+                    <p>严格质检，支持货到付款</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示区 -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">PRODUCTS</span>
+                <h2 class="section-title">精选好茶</h2>
+                <p class="section-subtitle">从万千名茶中为您严选</p>
+                <div class="section-divider">
+                    <span class="divider-leaf">&#127861;</span>
+                </div>
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="green">绿茶</button>
+                <button class="filter-btn" data-filter="red">红茶</button>
+                <button class="filter-btn" data-filter="oolong">乌龙茶</button>
+                <button class="filter-btn" data-filter="puer">普洱</button>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- 横幅区域 -->
+    <section class="banner">
+        <div class="banner-parallax"></div>
+        <div class="container banner-content">
+            <h2>春茶上新季</h2>
+            <p>2024年明前新茶已到货，限时9折优惠</p>
+            <a href="#products" class="btn-primary btn-outline">立即抢购</a>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <div class="about-img-wrapper">
+                    <div class="about-placeholder">&#127861;</div>
+                    <div class="about-img-decor"></div>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">ABOUT US</span>
+                <h2>关于茗香茶韵</h2>
+                <p>茗香茶韵成立于2010年，致力于将中国优质茶叶带到千家万户。我们深耕茶产业十余年，与福建、浙江、云南等核心产茶区的茶农建立长期合作关系。</p>
+                <p>每一款茶叶都经过专业评茶师品鉴挑选，确保将最好的茶品送到您的杯中。</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="14">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label">年行业经验</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50000">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label">忠实顾客</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label">茶品选择</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer" id="contact">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,40 C360,100 720,0 1080,60 C1260,80 1380,30 1440,40 L1440,100 L0,100 Z" fill="currentColor"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>&#127861; 茗香茶韵</h3>
+                    <p>品味千年茶文化，传承中华茶道精神</p>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <p>&#128222; 400-888-9999</p>
+                    <p>&#9993; contact@mingxiangtea.com</p>
+                    <p>&#128205; 福建省福州市</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快捷链接</h3>
+                    <p><a href="#">购物指南</a></p>
+                    <p><a href="#">售后服务</a></p>
+                    <p><a href="#">合作加盟</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 茗香茶韵. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 购物车侧边栏 -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>&#128717; 购物车</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>总计:</span>
+                <span id="cartTotal">&#165;0</span>
+            </div>
+            <button class="btn-primary btn-checkout">结算</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- 回到顶部 -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
